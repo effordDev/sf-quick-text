@@ -31,6 +31,9 @@ Provides a 'Add Quick Text' button that allows the user to both search and selec
 ## Events:
 ``` quicktextselect ``` - dispatches once a quick text record is selected.
 
+<hr>
+
+### Screenshots
 ![Alt text](<Screenshot 2023-09-06 at 11.15.43 AM.png>)
 ![Alt text](<Screenshot 2023-09-06 at 11.14.55 AM.png>)
 ![Alt text](<Screenshot 2023-09-06 at 11.15.11 AM.png>)
