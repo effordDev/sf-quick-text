@@ -1,18 +1,32 @@
-# Salesforce DX Project: Next Steps
+# sf-quick-text
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+<a href="https://githubsfdeploy.herokuapp.com">
+    <img alt="Deploy to Salesforce"
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png"
+    >   
+</a>
 
-## How Do You Plan to Deploy Your Changes?
+<br />
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+<a href="https://github.com/jsmithdev/sfdx-deploy-instructions">
+  Deploy via sfdx instead
+</a>
 
-## Configure Your Salesforce DX Project
+<br />
+<br />
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+Provides a 'Add Quick Text' button that allows the user to both search and select standard <a href="https://help.salesforce.com/s/articleView?id=sf.quick_text_setting_up.htm&language=en_US&type=5">Quick Text</a>. The selected text is then dispatched as an event for the developer to handle and implement.
 
-## Read All About It
+##Properties:
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+```js 
+    @api channelsToInclude = ''
+    @api btnVariant = 'brand'
+```
+
+**channelsToInclude** - include a comma separated list of quick text channels to be displayed to the user (Ex 'Email;Internal;Event;Task;Knowledge').
+
+**btnVariant** - the variant of the button.
+
+##Events:
+``` quicktextselect ``` - dispatches once a quick text record is selected.
