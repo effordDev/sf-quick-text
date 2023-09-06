@@ -17,7 +17,7 @@
 
 Provides a 'Add Quick Text' button that allows the user to both search and select standard <a href="https://help.salesforce.com/s/articleView?id=sf.quick_text_setting_up.htm&language=en_US&type=5">Quick Text</a>. The selected text is then dispatched as an event for the developer to handle and implement.
 
-##Properties:
+## Properties:
 
 ```js 
     @api channelsToInclude = ''
@@ -28,5 +28,9 @@ Provides a 'Add Quick Text' button that allows the user to both search and selec
 
 **btnVariant** - the variant of the button.
 
-##Events:
+## Events:
 ``` quicktextselect ``` - dispatches once a quick text record is selected.
+
+![Alt text](<Screenshot 2023-09-06 at 11.15.43 AM.png>)
+![Alt text](<Screenshot 2023-09-06 at 11.14.55 AM.png>)
+![Alt text](<Screenshot 2023-09-06 at 11.15.11 AM.png>)
