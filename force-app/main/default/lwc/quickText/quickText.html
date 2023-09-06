@@ -1,0 +1,51 @@
+<template>
+
+    <lightning-button
+        label="Add Quick Text"
+        onclick={handleAddQuickText}
+        variant={btnVariant}
+    ></lightning-button>
+    
+    <template lwc:if={showQuickTextModal}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+              
+                <div class="slds-modal__header">
+                    <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Quick Text</h1>
+                </div>
+
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <lightning-input
+                        type="search"
+                        label="Search for Quick Text"
+                        onchange={handleQuickTextSearch}
+                    ></lightning-input>
+
+                    <lightning-combobox
+                        label="Quick Text"
+                        options={quickTextOptions}
+                        onchange={handleQuickTextSelect}
+                        value={selectedQuickText}
+                    ></lightning-combobox>
+                </div>
+
+                <div class="slds-modal__footer">
+                    <lightning-button 
+                        label="Add" 
+                        onclick={AddSelectedQuickText}
+                        variant="brand"
+                    ></lightning-button>
+
+                    &nbsp;
+
+                    <lightning-button 
+                        label="Cancel" 
+                        onclick={closeQuickTextModal}
+                    ></lightning-button>
+                </div>
+            </div>
+          </section>
+          <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+
+</template>
