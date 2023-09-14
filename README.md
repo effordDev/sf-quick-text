@@ -31,6 +31,21 @@ Provides a 'Add Quick Text' button that allows the user to both search and selec
 ## Events:
 ``` quicktextselect ``` - dispatches once a quick text record is selected.
 
+Example:
+
+HTML
+```html
+<c-quick-text
+  onquicktextselect={handleQuickTextSelect}
+></c-quick-text>
+```
+
+JS
+```js
+handleQuickTextSelect(event) {
+  const quickTextSelected = event.detail.value
+}
+```
 <hr>
 
 ### Screenshots
